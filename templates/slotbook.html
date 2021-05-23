@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>parkoslot-A professional assistant for your parking</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .nav {
+            color: purple;
+            list-style-type: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav li {
+            display: inline-block;
+            font-size: 20px;
+            padding: 20px;
+        }
+
+        .nav .fa {
+            margin-right: 8px;
+        }
+
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .main {
+            background-color: purple;
+            width: 200px;
+            height: 48px;
+            margin: 0 auto;
+            text-align: center;
+            transition: width 4s linear, transform 4s;
+
+        }
+
+        h1 {
+            color: purple;
+            text-align: center;
+        }
+
+        .main:hover {
+            width: 250px;
+            transform: rotate(360deg);
+        }
+
+        h2 {
+            color: black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body background="{{ url_for('static', filename='image/logo.png') }}">
+<ul class="nav">
+    <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+    <li><a href="/l"><i class="fa fa-book" aria-hidden="true"></i>Slot Booking</a></li>
+    <li><a href="/s"><i class="fa fa-times" aria-hidden="true"></i>Slot Cancel</a></li>
+    <li><a href="/cc"><i class="fa fa-phone" aria-hidden="true"></i>Contact Us</a></li>
+    <li><a href="/a"><i class="fa fa-user" aria-hidden="true"></i>About Us</a></li>
+</ul>
+<h1>Parkoslot</h1>
+<p>A professional assistant for your parking</p>
+<hr/>
+<h2>Do you want to book a Slot now!</h2>
+<h3><u>BOOK SLOT</u></h3>
+<form>
+
+    </div>
+
+    <input class="input" type="text" placeholder="Username"></div>
+
+    <input class="input" type="email" name="" id="" placeholder="Email"></div>
+
+    <input class="input" type="password" name="" id="" placeholder="car number"></div>
+    <input class="input" type="datetime-local" name="" id="" placeholder="entering time"></div>
+
+    <div class="check">
+    </div>
+
+    <button id=" ">sign up</button>
+
+    </div>
+
+</form>
+</body>
+</html>

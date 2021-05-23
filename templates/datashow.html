@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>parkoslot-A professional assistant for your
+        parking</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        li a {
+
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            align: center;
+        }
+
+        .nav {
+            background-color: purple;
+            list-style-type: horizontal;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav li {
+            display: inline-block;
+            font-size: 20px;
+            padding: 20px;
+        }
+
+        .nav li:hover {
+            background-color: violet;
+        }
+
+        .nav .fa {
+            margin-right: 8px;
+        }
+
+        body {
+            background-repeat: repeat-y;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .main {
+            background-color: purple;
+            width: 200px;
+            height: 48px;
+            margin: 0 auto;
+            text-align: center;
+            transition: width 4s linear, transform 4s;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .main:hover {
+            width: 250px;
+            transform: rotate(360deg);
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+        }
+
+        h5 {
+            color: red;
+            font-size: 35px;
+            text-align: center;
+        }
+
+        p {
+            font-family: Serif;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        pre {
+            font-family: garamond;
+            color: black;
+            font-size: 28px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body background="{{ url_for('static', filename='image/logo.png') }}">
+<div class="main">
+    <h1>Parkoslot</h1></div>
+<p><i>A professional assistant for your
+    parking</i></p>
+<hr/>
+<table style="width:100%">
+<tr>
+    <th>ID</th>
+    <th>User_Name</th>
+    <th>Entry_Time</th>
+    <th>City_and_Car</th>
+    <th>Car_Number</th>
+    <th>Driver's_phone_Number</th>
+  </tr>
+{% for item in data %}
+<TR>
+   <TD class="c1" align="center"><SPAN>{{item[0]}}</SPAN></TD>
+   <TD class="c2" align="center"><SPAN>{{item[1]}}</SPAN></TD>
+   <TD class="c3" align="center"><SPAN>{{item[2]}}</SPAN></TD>
+   <TD class="c4" align="center"><SPAN>{{item[3]}}</SPAN></TD>
+   <TD class="c5" align="center"><SPAN>{{item[4]}}</SPAN></TD>
+   <TD class="c6" align="center"><SPAN>{{item[5]}}</SPAN></TD>
+</TR>
+{% endfor %}
+</table>
+<a href="/ad"><p><input align="right" type="submit" value="Logout" name="Logout"></p></a>
+</body>
+</html>

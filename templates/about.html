@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>parkoslot-A professional assistant for your parking</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        li a {
+
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            align: center;
+        }
+
+        .nav {
+            background-color: purple;
+            list-style-type: horizontal;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav li {
+            display: inline-block;
+            font-size: 20px;
+            padding: 20px;
+        }
+
+        .nav li:hover {
+            background-color: pink;
+        }
+
+        .nav .fa {
+            margin-right: 8px;
+        }
+
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .main {
+            background-color: purple;
+            width: 200px;
+            height: 48px;
+            margin: 0 auto;
+            text-align: center;
+            transition: width 4s linear, transform 4s;
+
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .main:hover {
+            width: 250px;
+            transform: rotate(360deg);
+        }
+
+
+        h2 {
+            color: purple;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        p {
+            font-family: garamond;
+            font-size: 28px;
+            text-align: center;
+            color: black;
+        }
+
+        h3 {
+            color: black;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        h4 {
+            color: black;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        img {
+            opacity: 1;
+        }
+
+        .info td {
+            padding: 10px;
+        }
+
+        .info td {
+            width: 50%;
+        }
+
+        .info img {
+            width: 30%;
+        }
+    </style>
+</head>
+<body background="{{ url_for('static', filename='image/logo.png') }}">
+<ul class="nav">
+    <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+    <li><a href="/l"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>Slot Booking</a></li>
+    <li><a href="/s"><i class="fa fa-times" aria-hidden="true"></i>Slot Cancel</a></li>
+    <li><a href="/cc"><i class="fa fa-phone" aria-hidden="true"></i>Contact Us</a></li>
+    <li><a href="/a"><i class="fa fa-group" aria-hidden="true"></i>About Us</a></li>
+    <li><a href="/ad"><i class="fa fa-user" aria-hidden="true"></i>Admin panel</a></li>
+</ul>
+<div class="main">
+
+    <h1>Parkoslot</h1></div>
+<p><i>A professional assistant for your parking</i></p>
+<hr/>
+<h2><u>About parkoslot</u></h2>
+<p> Parkolot is a helping hand for finding
+    your parking slot easily .It will help you to park your
+    car in a safe place with the easiest way.
+    People used to have tons of problem
+    of parking illegally.
+    At that time Parkoslot will
+    definately your best choice to secure your parking lot.
+</p>
+<h2><u>About Us</u></h2>
+<div class="main">
+    <h1> return "2E1" </h1></div>
+<div style="
+    margin: auto;
+    width: 70%;
+ ">
+    <table class="info">
+        <tr>
+            <td style="
+         text-align: center;
+         font-size: 24px">1. Tahsin Tarannum Chowdhury (C191227)
+            </td>
+            <td style="
+         text-align: center;
+         width: 90%;"><img src="{{ url_for('static', filename='image/aubonee.png') }}" alt="Notebook"
+                           style="width:25%;position:center;"></td>
+        </tr>
+
+        <tr>
+            <td style="
+         text-align: center;
+         font-size: 24px;
+"> 2. Shafia Nur Huma (C191203)
+            </td>
+            <td style="
+         text-align: center;
+         width: 70%;"><img src="{{ url_for('static', filename='image/huma1.png') }}" alt="Notebook"
+                           style="width:25%;position:center;"></td>
+        </tr>
+
+        <tr>
+            <td style="
+         text-align: center;
+         font-size: 24px">3. Naza Rahida Siddiqe Priya (C191237)
+            </td>
+            <td style="
+         text-align: center;
+         width: 70%;"><img src="{{ url_for('static', filename='image/priya.png') }}" alt="Notebook"
+                           style="width:25%;position:center;"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
