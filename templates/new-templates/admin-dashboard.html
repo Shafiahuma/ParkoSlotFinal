@@ -1,0 +1,69 @@
+{% extends "new-templates/layout.html" %}
+{% block content %}
+<body>
+    <div id="hero" class="hero overlay subpage-hero portfolio-hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Admin Panel</h1>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-portfolio">
+            <div class="container">
+                <div class="row mt-50">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Entry Time</th>
+                                <th>Out Time</th>
+                                <th>Car Info</th>
+                                <th>Car Number</th>
+                                <th>Driver's Phone Number</th>
+                                <th>Present?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            {% for item in data %}
+                            <tr>
+                                <td>{{item[0]}}</td>
+                                <th>{{item[1]}}</th>
+                                <td>{{item[2]}}</td>
+                                <td>{{item[2]}}</td>
+                                <td>{{item[3]}}</td>
+                                <td>{{item[4]}}</td>
+                                <td>{{item[5]}}</td>
+                                <td class="btn-green">YES</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-center mt-20">
+                    <button class="btn btn-fill">Log Out</button>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+
+    </main><!-- /#main -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-select.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.slicknav.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.countTo.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.shuffle.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+  
+</body>
+{% endblock %}
