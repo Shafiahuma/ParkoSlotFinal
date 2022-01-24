@@ -1,0 +1,70 @@
+{% extends "new-templates/layout.html" %}
+{% block content %}
+<body>
+    <div id="hero" class="hero overlay subpage-hero portfolio-hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Slot Cancel Confirm</h1>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-portfolio">
+            <div class="container">
+
+                <div class="row mt-50">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table class="table table-sm">
+                                    <tbody>
+                                        <tr>
+                                            <th style="text-align: center">Name</th>
+                                            <td style="text-align: center">Mark</td>
+                                        </tr>
+                                        <tr>
+                                            <th style="text-align: center">Name</th>
+                                            <td style="text-align: center">Mark</td>
+                                        </tr>
+                                        <tr>
+                                            <th style="text-align: center">Name</th>
+                                            <td style="text-align: center">Mark</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="typography">
+                    <h3 class="text-center heading-separator">Your slot cancel is <span>Successfully</span> completed.</h3>
+                </div>
+                <div class="text-center mt-20">
+                    <h3 class="text-center">Your bill is only {{ bill }} BDT</h3>
+                </div>
+                <div class="text-center mt-20">
+                    <button class="btn btn-fill">Paid</button>
+                </div>
+            </div>
+        </section><!-- /.section-portfolio -->
+
+    </main><!-- /#main -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-select.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.slicknav.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.countTo.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.shuffle.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+  
+</body>
+{% endblock %}

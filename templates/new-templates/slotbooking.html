@@ -1,0 +1,73 @@
+{% extends "new-templates/layout.html" %}
+{% block content %}
+<body>
+    <div id="hero" class="hero overlay subpage-hero portfolio-hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Book a Slot</h1>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <main id="main" class="site-main">
+
+        <section class="site-section subpage-site-section section-portfolio">
+            <div class="container">
+                <div class="row mt-50">
+                    <div class="col-md-8 col-md-offset-2">
+                        <form action="/booking-done" onsubmit="true" method="post">
+                            <div class="row">
+                                <div class="col-sm-12 mt-20">
+                                    <div class="form-group">
+                                      <label for="name">Name:</label>
+                                      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 mt-20">
+                                    <div class="form-group">
+                                      <label for="city_carnum_ext">City and Car number extention:</label>
+                                      <input type="text" class="form-control" name="city_and_c_exte" id="city_carnum_ext" placeholder="Example:CTG-kha">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 mt-20">
+                                    <div class="form-group">
+                                      <label for="carnumber">Car number:</label>
+                                      <input type="text" class="form-control" name="carnumber" id="carnumber" placeholder="Enter car number(6 digits) ">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 mt-20">
+                                    <div class="form-group">
+                                      <label for="phone">Driver's phone number:</label>
+                                      <input type="number" class="form-control" name="phone" id="phone" placeholder="Last 10 digits  of number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-20">
+                                <input class="btn btn-violet" type="submit" value="Book" name="Submit">
+                            </div>
+                            <div class="text-center mt-20">
+                                <input class="btn btn-fill" type="reset" value="Reset" name="Reset">
+                            </div>
+                        </form>
+                    </div>
+                </div><!-- /.form -->
+            </div>
+        </section><!-- /.section-portfolio -->
+
+    </main><!-- /#main -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-select.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.slicknav.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.countTo.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.shuffle.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+  
+</body>
+{% endblock %}

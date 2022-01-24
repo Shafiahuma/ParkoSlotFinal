@@ -14,22 +14,22 @@ mycursor = mydb.cursor()
 
 
 @app.route('/', methods=['GET', 'POST'])
-def hello_world():
+def homePage():
     print("aubonee")
     user = request.args.get('name')
     print(user)
-    return render_template("Home.html")
+    return render_template("new-templates/index.html")
 
 
-@app.route('/data', methods=['GET', 'POST'])
-def hello_world58():
+@app.route('/admin-dashboard', methods=['GET', 'POST'])
+def adminDashboard():
     if request.method == 'POST' and request.form['password'] == "":
         return render_template("adminblank.html")
     else:
         if request.method == 'POST' and request.form['password'] == "admin":
             mycursor.execute("SELECT * FROM car")
             myresult = mycursor.fetchall()
-            return render_template("datashow.html", data=myresult)
+            return render_template("new-templates/admin-dashboard.html", data=myresult)
         else:
             return render_template("invalid.html")
 
@@ -37,29 +37,29 @@ def hello_world58():
 # sql = "INSERT INTO customers (name, address) VALUES (%s, %s)"
 # val = ("John", "Highway 21")
 # mycursor.execute(sql, val)
-@app.route('/a', methods=['GET', 'POST'])
-def hello_world20():
+@app.route('/about', methods=['GET', 'POST'])
+def aboutUs():
     # print("aubonee1")
-    return render_template('about.html')
+    return render_template("new-templates/aboutus.html")
 
 
-@app.route('/l', methods=['GET', 'POST'])
-def hello_world1():
-    return render_template('Login.html')
+@app.route('/slot-booking', methods=['GET', 'POST'])
+def slotBooking():
+    return render_template("new-templates/slotbooking.html")
 
 
-@app.route('/cc', methods=['GET', 'POST'])
-def hello_world19():
-    return render_template('contact_us.html')
+@app.route('/contact-us', methods=['GET', 'POST'])
+def contactUs():
+    return render_template("new-templates/contact.html")
 
 
-@app.route('/ad', methods=['GET', 'POST'])
-def hello_world12():
-    return render_template('admin_panel.html')
+@app.route('/admin-panel', methods=['GET', 'POST'])
+def adminPanel():
+    return render_template("new-templates/adminpanel.html")
 
 
-@app.route('/d', methods=['GET', 'POST'])
-def hello_world8():
+@app.route('/booking-done', methods=['GET', 'POST'])
+def bookingDone():
     global result
     check = "select count(id) from car;"
     mycursor.execute(check)
@@ -74,7 +74,7 @@ def hello_world8():
                 mycursor.execute(sql, val)
                 mydb.commit()
                 result = request.form
-                return render_template('Done.html', result=result)
+                return render_template("new-templates/bookconfirm.html", result=result)
             except mysql.connector.IntegrityError as ierror:
                 return render_template("duplicate.html")
         else:
@@ -83,9 +83,9 @@ def hello_world8():
         return render_template("book.html")
 
 
-@app.route('/s', methods=['GET', 'POST'])
-def hello_world6():
-    return render_template('slotcancel.html')
+@app.route('/slot-cancel', methods=['GET', 'POST'])
+def slotCancel():
+    return render_template("new-templates/slotcancel.html")
 
 
 @app.route('/p', methods=['GET', 'POST'])
@@ -93,8 +93,8 @@ def hello_world61():
     return render_template('paid.html')
 
 
-@app.route('/b', methods=['GET', 'POST'])
-def hello_world5():
+@app.route('/booking-cancel', methods=['GET', 'POST'])
+def bookingCancel():
     if request.method == 'POST' and request.form['name'] != "":
         # print("GG")
         val = request.form['phone']
@@ -118,7 +118,7 @@ def hello_world5():
         sql = "DELETE FROM car WHERE phone= %s"
         mycursor.execute(sql, adr)
         mydb.commit()
-        return render_template('Bill.html', bill=cost)
+        return render_template("new-templates/cancelconfirm.html", bill=cost)
     else:
         return render_template("unauthorized.html")
 

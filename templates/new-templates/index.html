@@ -1,0 +1,25 @@
+{% extends "new-templates/layout.html" %}
+{% block content %}
+<body>
+    <div id="hero" class="hero overlay">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Make your parking space DIGITAL with us</h1>
+                <p>A professional assistant for your parking</p>
+            </div><!-- /.hero-text -->
+        </div><!-- /.hero-content -->
+    </div><!-- /.hero -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap-select.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.slicknav.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.countTo.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.shuffle.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+  
+</body>
+{% endblock %}
